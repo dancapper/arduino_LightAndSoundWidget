@@ -62,3 +62,10 @@ for the reader. I imagine there would be a need to initialise it again, and mine
 noise when powered on. For my intended purpose, the additional effort did not seem worthwhile.
 
 Many arduino and clone boards include a "power on" LED. Deleting this will help battery life some.
+
+KNOWN LIMITATIONS:
+
+Because MP3 playback happens asynchronously, the code will not wait for MP3 playback to finish before sleeping.
+
+Either set SLEEP_TIMER longer than your longest mp3 file, or fix it if you feel so inclined. OnPlayFinished()
+might be useful here.
