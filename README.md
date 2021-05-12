@@ -1,16 +1,16 @@
 Light and Sound widget with DFPlayer Mini
 
 Dan Capper <dan@ub3r.geek.nz>
+
 13 May 2021
 
-Plays a random .mp3 from the SD card and lights an LED when a button is pressed
-Based on example code from the DFPlayer Mini MP3 library by Makuna
+Plays a random .mp3 from the SD card and lights an LED when a button is pressed. Based on example code from the DFPlayer Mini MP3 library by Makuna.
 
 SOFTWARE REQUIREMENTS:
 
-Arduino IDE, or whatever is your preferred flavour
-DFPlayer Mini MP3 Library by Makuna
-LowPower_LowPowerLab Library by LowPowerLab
+* Arduino IDE, or whatever is your preferred flavour
+* DFPlayer Mini MP3 Library by Makuna
+* LowPower_LowPowerLab Library by LowPowerLab
 
 HARDWARE REQUIREMENTS:
 
@@ -26,17 +26,25 @@ WIRING:
 
 DFPlayer Mini:
 
-DFPlayer Mini TX via 1k resistor to Arduino pin 14, RX via 1k resistor to Arduino pin 15
-DFPlayer Mini VCC to Arduino VCC (or battery+), GND to Arduino GND, SPK+/SPK- to speaker
+* TX via 1k resistor to Arduino pin 14
+* RX via 1k resistor to Arduino pin 15
+* VCC to Arduino VCC (or battery+)
+* GND to Arduino GND
+* SPK+/SPK- to speaker
 
 Arduino:
 
-Connect VCC (or battery+) to VCC, GND to GND (or use USB for power)
-Connect momentary switch between pin 2 and GND
+* VCC (or battery+) to VCC
+* GND to GND (or use USB for power)
+* Momentary switch between pin 2 and GND
+
 LED optional:
-For a single LED, Pin 3 to 330 ohm to LED+, GND to LED-
+
+* For a single LED, Pin 3 to 330 ohm to LED+, GND to LED-
+
 For more LEDs in parallel or high power LEDs, use an NPN transistor:
-Pin 3 to 1k to Base, GND to Emitter, LED- to Collector, LED+ to 330 ohm (or as suits) to VCC
+
+* Pin 3 to 1k to Base, GND to Emitter, LED- to Collector, LED+ to 330 ohm (or as suits) to VCC
 
 A NOTE ON BATTERY LIFE:
 
