@@ -34,8 +34,8 @@ DFPlayer Mini:
 
 Arduino:
 
-* VCC (or battery+) to VCC
-* GND to GND (or use USB for power)
+* VCC to VCC (or Battery +) and GND to GND (or Battery -)
+* OR use USB for power
 * Momentary switch between pin 2 and GND
 
 LED optional:
