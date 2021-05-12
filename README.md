@@ -41,11 +41,15 @@ Arduino:
 
 LED optional:
 
-* For a single LED, Pin 3 to 330 ohm to LED+, GND to LED-
+* Pin 3 to 330 ohm to LED+
+* GND to LED-
 
 For more LEDs in parallel or high power LEDs, use an NPN transistor:
 
-* Pin 3 to 1k to Base, GND to Emitter, LED- to Collector, LED+ to 330 ohm (or as suits) to VCC
+* Pin 3 to 1k to Base
+* GND to Emitter
+* LED- to Collector
+* LED+ to 330 ohm (or as suits) to VCC
 
 A NOTE ON BATTERY LIFE:
 
