@@ -15,6 +15,7 @@ SOFTWARE REQUIREMENTS:
 HARDWARE REQUIREMENTS:
 
 * DFPlayer Mini module
+* MicroSD card
 * Arduino or clone (Most anything should work; I used a Leonardo/Micro clone)
 * Momentary Switch
 * Power source (3 x AA batteries in series, making 4.5v, worked for me. The DFPlayer Mini accepts 3.2-5.5v)
