@@ -60,3 +60,5 @@ One could try a low-gate drive MOSFET attached to an output pin which is HIGH on
 isn't sleeping, and use that to switch the DFPlayer off completely. This is left as an exercise
 for the reader. I imagine there would be a need to initialise it again, and mine at least emits a small 
 noise when powered on. For my intended purpose, the additional effort did not seem worthwhile.
+
+Many arduino and clone boards include a "power on" LED. Deleting this will help battery life some.
