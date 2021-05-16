@@ -15,6 +15,7 @@
 // HARDWARE REQUIREMENTS:
 //
 // * DFPlayer Mini module
+// * MicroSD Card (loaded with your choice of mp3 files)
 // * Arduino or clone (Most anything should work; I used a Leonardo/Micro clone)
 // * Momentary Switch
 // * Power source (3 x AA batteries in series, making 4.5v, worked for me. The DFPlayer Mini accepts 3.2-5.5v)
@@ -26,13 +27,18 @@
 //
 // DFPlayer Mini:
 //
-// DFPlayer Mini TX via 1k resistor to Arduino pin 14, RX via 1k resistor to Arduino pin 15
-// DFPlayer Mini VCC to Arduino VCC (or battery+), GND to Arduino GND, SPK+/SPK- to speaker
+// TX via 1k resistor to Arduino pin 14
+// RX via 1k resistor to Arduino pin 15
+// VCC to Arduino VCC (or battery+)
+// GND to Arduino GND
+// SPK+/SPK- to speaker
 //
 // Arduino:
 //
-// Connect VCC (or battery+) to VCC, GND to GND (or use USB for power)
-// Connect momentary switch between pin 2 and GND
+// VCC to VCC or Battery+
+// GND to GND
+// OR use USB for power
+// Momentary switch between pin 2 and GND
 // LED optional:
 // For a single LED, Pin 3 to 330 ohm to LED+, GND to LED-
 // For more LEDs in parallel or high power LEDs, use an NPN transistor:
@@ -47,6 +53,15 @@
 // isn't sleeping, and use that to switch the DFPlayer off completely. This is left as an exercise
 // for the reader. I imagine there would be a need to initialise it again, and mine at least emits a small 
 // noise when powered on. For my intended purpose, the additional effort did not seem worthwhile.
+//
+// Many arduino and clone boards include a "power on" LED. Deleting this will help battery life some.
+//
+// KNOWN LIMITATIONS:
+//
+// Because MP3 playback happens asynchronously, the code will not wait for MP3 playback to finish before sleeping.
+//
+// Either set SLEEP_TIMER longer than your longest mp3 file, or fix it if you feel so inclined. OnPlayFinished()
+// might be useful here.
 
 #include <LowPower.h>
 #include <SoftwareSerial.h>
